@@ -21,3 +21,11 @@ const db = mysql.createConnection({
     port: 3306,//sesuaikan sama port mysql maisng"
 })
 
+db.connect((err) => {
+    if (err){
+        console.error('Error connecting to database:' + err.stack);
+        return;
+    }
+    console.log('Connection successfully');
+})
+
